@@ -117,13 +117,13 @@ Singleton {
 
     function getNetworkIcon(strength: int): string {
         if (strength >= 80)
-            return "signal_wifi_4_bar";
+            return "android_wifi_4_bar";
         if (strength >= 60)
-            return "network_wifi_3_bar";
+            return "android_wifi_3_bar";
         if (strength >= 40)
-            return "network_wifi_2_bar";
+            return "wifi_2_bar";
         if (strength >= 20)
-            return "network_wifi_1_bar";
+            return "wifi_1_bar";
         return "signal_wifi_0_bar";
     }
 
@@ -178,7 +178,7 @@ Singleton {
 
     function getVolumeIcon(volume: real, isMuted: bool): string {
         if (isMuted)
-            return "no_sound";
+            return "volume_off";
         if (volume >= 0.5)
             return "volume_up";
         if (volume > 0)

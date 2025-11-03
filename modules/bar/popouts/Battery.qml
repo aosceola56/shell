@@ -183,7 +183,7 @@ Column {
             anchors.rightMargin: Appearance.padding.small
 
             profile: PowerProfile.Performance
-            icon: "rocket_launch"
+            icon: "speed"
         }
     }
 

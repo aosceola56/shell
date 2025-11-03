@@ -230,18 +230,18 @@ StyledRect {
                         if (PowerProfiles.profile === PowerProfile.PowerSaver)
                             return "energy_savings_leaf";
                         if (PowerProfiles.profile === PowerProfile.Performance)
-                            return "rocket_launch";
+                            return "speed";
                         return "balance";
                     }
 
                     const perc = UPower.displayDevice.percentage;
                     const charging = !UPower.onBattery;
                     if (perc === 1)
-                        return charging ? "battery_charging_full" : "battery_full";
+                        return charging ? "battery_android_bolt" : "battery_android_full";
                     let level = Math.floor(perc * 7);
                     if (charging && (level === 4 || level === 1))
                         level--;
-                    return charging ? `battery_charging_${(level + 3) * 10}` : `battery_${level}_bar`;
+                    return charging ? `battery_android_bolt` : `battery_android_${level}`;
                 }
                 color: !UPower.onBattery || UPower.displayDevice.percentage > 0.2 ? root.colour : Colours.palette.m3error
                 fill: 1
