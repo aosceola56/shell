@@ -109,13 +109,13 @@ Singleton {
             return "signal_wifi_0_bar";
         } else {
             if (strength >= 80)
-                return "network_wifi";
+                return "android_wifi_4_bar";
             if (strength >= 60)
-                return "network_wifi_3_bar";
+                return "wifi";
             if (strength >= 40)
-                return "network_wifi_2_bar";
+                return "wifi_2_bar";
             if (strength >= 20)
-                return "network_wifi_1_bar";
+                return "wifi_1_bar";
             return "signal_wifi_0_bar";
         }
     }
